@@ -1,0 +1,183 @@
+Vulkan dispatcher initialization disassembly
+Date: 2026-11-06
+Library: /data/data/com.termux/files/usr/lib/libggml-vulkan.so
+Target region: 0x2ef79d0–0x2ef7c80
+
+
+/data/data/com.termux/files/usr/lib/libggml-vulkan.so:	file format elf64-littleaarch64
+
+Disassembly of section .text:
+
+0000000002ef7930 <ggml_backend_vk_buffer_type>:
+ 2ef79d0:      	stp	d9, d8, [sp, #0x30]
+ 2ef79d4:      	stp	x29, x30, [sp, #0x40]
+ 2ef79d8:      	stp	x28, x27, [sp, #0x50]
+ 2ef79dc:      	stp	x26, x25, [sp, #0x60]
+ 2ef79e0:      	stp	x24, x23, [sp, #0x70]
+ 2ef79e4:      	stp	x22, x21, [sp, #0x80]
+ 2ef79e8:      	stp	x20, x19, [sp, #0x90]
+ 2ef79ec:      	add	x29, sp, #0x40
+ 2ef79f0:      	sub	sp, sp, #0xdc0
+ 2ef79f4:      	mrs	x26, TPIDR_EL0
+ 2ef79f8:      	ldr	x8, [x26, #0x28]
+ 2ef79fc:      	stur	x8, [x29, #-0x58]
+ 2ef7a00:      	adrp	x8, 0x2fdb000 <_ZN16vk_memory_logger9log_mutexE+0x19a8>
+ 2ef7a04:      	ldrb	w8, [x8, #0x91]
+ 2ef7a08:      	tbnz	w8, #0x0, 0x2efa4fc <ggml_backend_vk_buffer_type+0x2bcc>
+ 2ef7a0c:      	adrp	x8, 0x2fcf000 <_ZTVN2vk38VideoPictureLayoutNotSupportedKHRErrorE+0x40>
+ 2ef7a10:      	adrp	x9, 0x2fd9000 <arr_dmmv_q5_k_f16_f32_data+0x8>
+ 2ef7a14:      	ldr	x8, [x8, #0x908]
+ 2ef7a18:      	str	x8, [x9, #0x6c8]
+ 2ef7a1c:      	adrp	x1, 0x69000
+ 2ef7a20:      	add	x1, x1, #0x55
+ 2ef7a24:      	mov	x0, xzr
+ 2ef7a28:      	bl	0x2fc9810 <vkGetInstanceProcAddr@plt>
+ 2ef7a2c:      	adrp	x8, 0x2fd9000 <arr_dmmv_q5_k_f16_f32_data+0x8>
+ 2ef7a30:      	add	x8, x8, #0x680
+ 2ef7a34:      	ldr	x9, [x8, #0x48]
+ 2ef7a38:      	str	x0, [x8]
+ 2ef7a3c:      	adrp	x1, 0x68000
+ 2ef7a40:      	add	x1, x1, #0x512
+ 2ef7a44:      	mov	x0, xzr
+ 2ef7a48:      	blr	x9
+ 2ef7a4c:      	adrp	x19, 0x2fd9000 <arr_dmmv_q5_k_f16_f32_data+0x8>
+ 2ef7a50:      	add	x19, x19, #0x6c8
+ 2ef7a54:      	ldr	x8, [x19]
+ 2ef7a58:      	str	x0, [x19, #0x20]
+ 2ef7a5c:      	adrp	x1, 0x70000
+ 2ef7a60:      	add	x1, x1, #0x6c7
+ 2ef7a64:      	mov	x0, xzr
+ 2ef7a68:      	blr	x8
+ 2ef7a6c:      	ldr	x8, [x19]
+ 2ef7a70:      	str	x0, [x19, #0x30]
+ 2ef7a74:      	adrp	x1, 0x6d000
+ 2ef7a78:      	add	x1, x1, #0xab0
+ 2ef7a7c:      	mov	x0, xzr
+ 2ef7a80:      	blr	x8
+ 2ef7a84:      	adrp	x9, 0x2fd9000 <arr_dmmv_q5_k_f16_f32_data+0x8>
+ 2ef7a88:      	mov	x8, x0
+ 2ef7a8c:      	str	x0, [x9, #0xac8]
+ 2ef7a90:      	add	x0, sp, #0xa60
+ 2ef7a94:      	blr	x8
+ 2ef7a98:      	str	x26, [sp, #0x68]
+ 2ef7a9c:      	cbnz	w0, 0x2efc204 <ggml_backend_vk_buffer_type+0x48d4>
+ 2ef7aa0:      	ldr	w8, [sp, #0xa60]
+ 2ef7aa4:      	lsr	w9, w8, #13
+ 2ef7aa8:      	cmp	w9, #0x200
+ 2ef7aac:      	b.ls	0x2efd888 <ggml_backend_vk_buffer_type+0x5f58>
+ 2ef7ab0:      	adrp	x9, 0x75000
+ 2ef7ab4:      	add	x9, x9, #0x74e
+ 2ef7ab8:      	adrp	x19, 0x2fd9000 <arr_dmmv_q5_k_f16_f32_data+0x8>
+ 2ef7abc:      	stp	xzr, x9, [sp, #0x198]
+ 2ef7ac0:      	mov	w9, #0x1                // =1
+ 2ef7ac4:      	mov	w20, #0x104             // =260
+ 2ef7ac8:      	str	wzr, [sp, #0x190]
+ 2ef7acc:      	str	w9, [sp, #0x1a8]
+ 2ef7ad0:      	str	xzr, [sp, #0x1b0]
+ 2ef7ad4:      	str	wzr, [sp, #0x1b8]
+ 2ef7ad8:      	str	w8, [sp, #0x1bc]
+ 2ef7adc:      	str	xzr, [sp, #0xa68]
+ 2ef7ae0:      	str	xzr, [sp, #0xa60]
+ 2ef7ae4:      	str	xzr, [sp, #0xa70]
+ 2ef7ae8:      	b	0x2ef7b10 <ggml_backend_vk_buffer_type+0x1e0>
+ 2ef7aec:      	add	x0, sp, #0xa60
+ 2ef7af0:      	bl	0x2fb2a68 <_ZNK2vk17ErrorCategoryImpl7messageEi+0xc68>
+ 2ef7af4:      	ldr	x2, [sp, #0xa60]
+ 2ef7af8:      	ldr	x8, [x19, #0x6e8]
+ 2ef7afc:      	add	x1, sp, #0x4c0
+ 2ef7b00:      	mov	x0, xzr
+ 2ef7b04:      	blr	x8
+ 2ef7b08:      	cmp	w0, #0x5
+ 2ef7b0c:      	b.ne	0x2ef7b6c <ggml_backend_vk_buffer_type+0x23c>
+ 2ef7b10:      	ldr	x8, [x19, #0x6e8]
+ 2ef7b14:      	add	x1, sp, #0x4c0
+ 2ef7b18:      	mov	x0, xzr
+ 2ef7b1c:      	mov	x2, xzr
+ 2ef7b20:      	blr	x8
+ 2ef7b24:      	cbnz	w0, 0x2ef7b08 <ggml_backend_vk_buffer_type+0x1d8>
+ 2ef7b28:      	ldr	w8, [sp, #0x4c0]
+ 2ef7b2c:      	cbz	w8, 0x2ef7b08 <ggml_backend_vk_buffer_type+0x1d8>
+ 2ef7b30:      	ldr	x9, [sp, #0xa68]
+ 2ef7b34:      	ldr	x2, [sp, #0xa60]
+ 2ef7b38:      	mov	x10, #0xfc1             // =4033
+ 2ef7b3c:      	movk	x10, #0xc0fc, lsl #16
+ 2ef7b40:      	sub	x9, x9, x2
+ 2ef7b44:      	movk	x10, #0xfc0f, lsl #32
+ 2ef7b48:      	asr	x9, x9, #2
+ 2ef7b4c:      	movk	x10, #0xfc0, lsl #48
+ 2ef7b50:      	mul	x9, x9, x10
+ 2ef7b54:      	subs	x1, x8, x9
+ 2ef7b58:      	b.hi	0x2ef7aec <ggml_backend_vk_buffer_type+0x1bc>
+ 2ef7b5c:      	b.hs	0x2ef7af8 <ggml_backend_vk_buffer_type+0x1c8>
+ 2ef7b60:      	umaddl	x8, w8, w20, x2
+ 2ef7b64:      	str	x8, [sp, #0xa68]
+ 2ef7b68:      	b	0x2ef7af8 <ggml_backend_vk_buffer_type+0x1c8>
+ 2ef7b6c:      	mov	w8, #0x35fe             // =13822
+ 2ef7b70:      	movk	w8, #0xc465, lsl #16
+ 2ef7b74:      	cmp	w0, w8
+ 2ef7b78:      	b.le	0x2efaea4 <ggml_backend_vk_buffer_type+0x3574>
+ 2ef7b7c:      	add	w8, w0, #0xd
+ 2ef7b80:      	cmp	w8, #0xd
+ 2ef7b84:      	b.hi	0x2efbee4 <ggml_backend_vk_buffer_type+0x45b4>
+ 2ef7b88:      	adrp	x9, 0x63000
+ 2ef7b8c:      	add	x9, x9, #0x4d4
+ 2ef7b90:      	adr	x10, 0x2ef7ba0 <ggml_backend_vk_buffer_type+0x270>
+ 2ef7b94:      	ldrh	w11, [x9, x8, lsl #1]
+ 2ef7b98:      	add	x10, x10, x11, lsl #2
+ 2ef7b9c:      	br	x10
+ 2ef7ba0:      	ldr	x8, [sp, #0xa68]
+ 2ef7ba4:      	ldr	x28, [sp, #0xa60]
+ 2ef7ba8:      	mov	x10, #0xfc1             // =4033
+ 2ef7bac:      	movk	x10, #0xc0fc, lsl #16
+ 2ef7bb0:      	mov	w11, #0x104             // =260
+ 2ef7bb4:      	sub	x9, x8, x28
+ 2ef7bb8:      	movk	x10, #0xfc0f, lsl #32
+ 2ef7bbc:      	asr	x9, x9, #2
+ 2ef7bc0:      	movk	x10, #0xfc0, lsl #48
+ 2ef7bc4:      	mul	x9, x9, x10
+ 2ef7bc8:      	ldr	w10, [sp, #0x4c0]
+ 2ef7bcc:      	nop
+ 2ef7bd0:      	umaddl	x11, w10, w11, x28
+ 2ef7bd4:      	cmp	x9, x10
+ 2ef7bd8:      	csel	x21, x11, x8, hi
+ 2ef7bdc:      	ldr	x8, [sp, #0xa70]
+ 2ef7be0:      	cmp	x28, x21
+ 2ef7be4:      	str	x8, [sp, #0x58]
+ 2ef7be8:      	b.eq	0x2ef7c14 <ggml_backend_vk_buffer_type+0x2e4>
+ 2ef7bec:      	adrp	x19, 0x69000
+ 2ef7bf0:      	add	x19, x19, #0x8df
+ 2ef7bf4:      	mov	x20, x28
+ 2ef7bf8:      	mov	x0, x19
+ 2ef7bfc:      	mov	x1, x20
+ 2ef7c00:      	bl	0x2fc9820 <strcmp@plt>
+ 2ef7c04:      	cbz	w0, 0x2ef7ec8 <ggml_backend_vk_buffer_type+0x598>
+ 2ef7c08:      	add	x20, x20, #0x104
+ 2ef7c0c:      	cmp	x20, x21
+ 2ef7c10:      	b.ne	0x2ef7bf8 <ggml_backend_vk_buffer_type+0x2c8>
+ 2ef7c14:      	adrp	x0, 0x2fcf000 <_ZTVN2vk38VideoPictureLayoutNotSupportedKHRErrorE+0x40>
+ 2ef7c18:      	adrp	x1, 0x66000
+ 2ef7c1c:      	add	x1, x1, #0xa53
+ 2ef7c20:      	ldr	x0, [x0, #0x8d8]
+ 2ef7c24:      	mov	w2, #0x46               // =70
+ 2ef7c28:      	bl	0x2fc29b8 <_ZNSt6__ndk16vectorIN2vk5EventENS_9allocatorIS2_EEE18__insert_with_sizeB8ne210000INS_11__wrap_iterIPS2_EES9_EES9_NS7_IPKS2_EET_T0_l+0x3bc>
+ 2ef7c2c:      	ldr	x8, [x0]
+ 2ef7c30:      	mov	x19, x0
+ 2ef7c34:      	ldur	x9, [x8, #-0x18]
+ 2ef7c38:      	add	x8, sp, #0xa60
+ 2ef7c3c:      	add	x0, x0, x9
+ 2ef7c40:      	bl	0x2fc96a0 <_ZNKSt6__ndk18ios_base6getlocEv@plt>
+ 2ef7c44:      	adrp	x1, 0x2fcf000 <_ZTVN2vk38VideoPictureLayoutNotSupportedKHRErrorE+0x40>
+ 2ef7c48:      	add	x0, sp, #0xa60
+ 2ef7c4c:      	ldr	x1, [x1, #0x8e0]
+ 2ef7c50:      	bl	0x2fc96b0 <_ZNKSt6__ndk16locale9use_facetERNS0_2idE@plt>
+ 2ef7c54:      	ldr	x8, [x0]
+ 2ef7c58:      	ldr	x8, [x8, #0x38]
+ 2ef7c5c:      	mov	w1, #0xa                // =10
+ 2ef7c60:      	blr	x8
+ 2ef7c64:      	mov	w20, w0
+ 2ef7c68:      	add	x0, sp, #0xa60
+ 2ef7c6c:      	bl	0x2fc96c0 <_ZNSt6__ndk16localeD1Ev@plt>
+ 2ef7c70:      	mov	x0, x19
+ 2ef7c74:      	mov	w1, w20
+ 2ef7c78:      	bl	0x2fc96d0 <_ZNSt6__ndk113basic_ostreamIcNS_11char_traitsIcEEE3putEc@plt>
+ 2ef7c7c:      	mov	x0, x19
